@@ -11,8 +11,8 @@ import {
     REGISTER,
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'         // defaults to localStorage for web
-import contactsReduser from '../redux/contactsSlice';
-import filterReduser from '../redux/filterSlice'
+import contactsReduser from './slices/contactsSlice';
+import filterReduser from './slices/filterSlice'
 
 export const rootReducers = combineReducers({
     contacts: contactsReduser,

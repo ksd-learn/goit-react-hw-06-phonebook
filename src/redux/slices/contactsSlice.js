@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { exampleBook } from '../data/exampleBook';
+import { exampleBook } from '../../data/exampleBook';
 
 const book = JSON.parse(localStorage.getItem('phonebook')) || exampleBook;
 
