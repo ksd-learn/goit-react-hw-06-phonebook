@@ -1,3 +1,4 @@
+                      // REDUX С локальным storage
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import {
     persistStore,
@@ -17,7 +18,7 @@ export const rootReducers = combineReducers({
     contacts: contactsReduser,
     filter: filterReduser
 })
-
+                                //whitelist: ['contacts'] - следует применять для сохранения массива
 const persistConfig = {
     key: 'phonebook',
     storage,
@@ -36,10 +37,18 @@ export const store = configureStore({
         })
 });
 
-
-
-
-
-
-
 export const persistor = persistStore(store)
+
+
+
+          // REDUX БЕЗ localstorage
+//import { configureStore, combineReducers } from "@reduxjs/toolkit";
+//import contactsReduser from '../redux/contactsSlice';
+//import filterReduser from '../redux/filterSlice'
+//
+//export const store = configureStore({
+//  reducer: {
+//    contacts: contactsReduser,
+//    filter: filterReduser
+//  },
+//})
