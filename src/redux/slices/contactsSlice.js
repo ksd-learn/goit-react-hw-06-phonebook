@@ -1,11 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { exampleBook } from '../../data/exampleBook';
 
-const book = JSON.parse(localStorage.getItem('phonebook')) || exampleBook;
-
 export const contactsSlice = createSlice({
   name: 'contacts',
-  initialState: book,
+  initialState: exampleBook,
   reducers: {
     add(state, action) {
       return [...state, action.payload]
