@@ -1,11 +1,4 @@
-import { useSelector } from 'react-redux';
+export const selectorContacts = state => state.contacts;
 
-export const SelectorContacts = () => {
-    const contacts = useSelector((state) => state.contacts);
-    return contacts
-}
+export const selectorFilter = state => state.filter;
 
-export const SelectorFilter = () => {
-    const filter = useSelector((state) => state.filter);
-    return filter
-}
